@@ -1,0 +1,131 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>BAUD · Studio Devis — version de test</title>
+<style>
+  :root { --rose:#f02274; --rose-profond:#d60093; --rose-pale:#fdeaf2; --gris:#7f7f7f; --trait:#e6e6e6; --encre:#333; }
+  * { box-sizing:border-box; }
+  body { margin:0; font-family:"Calibri","Segoe UI",Arial,sans-serif; color:var(--encre); background:#fff; line-height:1.55; font-size:17px; }
+  .bandeau { background:var(--rose-pale); border-bottom:3px solid var(--rose); text-align:center; padding:8px 16px; font-size:14px; color:var(--rose-profond); }
+  header, section, footer { max-width:1040px; margin:0 auto; padding:0 24px; }
+  .hero { display:grid; grid-template-columns:200px 1fr; gap:36px; align-items:center; padding-top:48px; padding-bottom:40px; }
+  .hero img { width:100%; height:auto; }
+  h1 { font-family:"Candara Light","Candara",Georgia,serif; font-weight:400; font-size:44px; line-height:1.1; margin:0 0 10px; color:var(--rose); }
+  h2 { font-family:"Candara Light","Candara",Georgia,serif; font-weight:400; font-size:30px; color:var(--rose); margin:0 0 14px; }
+  .filet { width:56px; height:4px; background:var(--rose); margin-bottom:14px; }
+  .chapo { color:var(--gris); font-size:19px; margin:0 0 22px; }
+  .bouton { display:inline-block; background:var(--rose); color:#fff; text-decoration:none; padding:14px 26px; border-radius:8px; font-weight:700; font-size:18px; }
+  .bouton:hover { background:var(--rose-profond); }
+  .aide { color:var(--gris); font-size:14px; margin-top:10px; }
+  section { padding-top:34px; padding-bottom:34px; border-top:1px solid var(--trait); }
+  .etapes { display:grid; grid-template-columns:repeat(3,1fr); gap:20px; margin:0; padding:0; list-style:none; counter-reset:e; }
+  .etapes li { counter-increment:e; background:var(--rose-pale); border-radius:10px; padding:18px 18px 18px 18px; }
+  .etapes li::before { content:"0" counter(e); display:block; font-family:"Candara Light",Georgia,serif; font-size:30px; color:var(--rose); }
+  .etapes strong { display:block; margin-bottom:4px; }
+  .galerie { display:grid; grid-template-columns:repeat(auto-fill,minmax(300px,1fr)); gap:16px; }
+  .galerie a { display:block; border:1px solid var(--trait); border-radius:8px; overflow:hidden; }
+  .galerie img { width:100%; display:block; }
+  .galerie figcaption { font-size:13px; color:var(--gris); padding:6px 10px; }
+  figure { margin:0; }
+  ol.pas { padding-left:22px; } ol.pas li { margin-bottom:10px; }
+  .alerte { background:#fff4e5; border:1px solid #f5c98b; border-radius:8px; padding:12px 16px; }
+  ul.points li { margin-bottom:8px; }
+  footer { padding-top:26px; padding-bottom:44px; color:var(--gris); font-size:14px; border-top:1px solid var(--trait); display:flex; gap:16px; align-items:center; justify-content:space-between; flex-wrap:wrap; }
+  footer img { height:54px; }
+  a { color:var(--rose-profond); }
+  @media (max-width:760px) { .hero { grid-template-columns:1fr; } .hero img { max-width:150px; } .etapes { grid-template-columns:1fr; } h1 { font-size:34px; } }
+</style>
+</head>
+<body>
+<div class="bandeau">Version de test — page non référencée, réservée à l'équipe BAUD</div>
+
+<header class="hero">
+  <img src="assets/logo-baud.png" alt="BAUD Besançon">
+  <div>
+    <div class="filet"></div>
+    <h1>Studio Devis</h1>
+    <p class="chapo">Transformez un devis FTBE en devis vendeur à la charte BAUD : plaquette paysage, photos, synthèse budgétaire, bon pour accord, conditions générales.</p>
+    <a class="bouton" href="https://github.com/manil-hub/baud-preview-0b9867d6397a/releases/download/v1/BAUD-Studio-Devis-TEST-v1.zip">Télécharger la version 1 (54 Mo)</a>
+    <p class="aide">Windows 10 ou 11 · rien à installer · PowerPoint pour obtenir le PDF · tout reste sur votre poste</p>
+  </div>
+</header>
+
+<section>
+  <h2>Comment ça marche</h2>
+  <ol class="etapes">
+    <li><strong>Déposez le PDF FTBE</strong>L'outil lit le client, les convives, le lieu, les rubriques et les montants.</li>
+    <li><strong>Relisez à l'écran</strong>Libellés, accroche, déroulé, photos. Les montants restent ceux de FTBE, en lecture seule.</li>
+    <li><strong>Générez</strong>Un PowerPoint modifiable et le PDF à envoyer, en 15 à 30 secondes.</li>
+  </ol>
+  <p class="aide">Cette première version couvre les réceptions entreprise (cocktail dînatoire, buffet, repas). Le devis mariage n'est pas encore pris en charge.</p>
+</section>
+
+<section>
+  <h2>Un exemple de résultat</h2>
+  <p>Devis d'exemple, avec un client fictif. Cliquez sur une page pour l'agrandir.</p>
+  <div class="galerie">
+    <figure><a href="assets/apercu-couverture.jpg"><img src="assets/apercu-couverture.jpg" alt="Couverture" loading="lazy"></a><figcaption>Couverture</figcaption></figure>
+    <figure><a href="assets/apercu-brief.jpg"><img src="assets/apercu-brief.jpg" alt="Vos attentes" loading="lazy"></a><figcaption>Vos attentes : invités, lieu, déroulé, formule</figcaption></figure>
+    <figure><a href="assets/apercu-cocktail.jpg"><img src="assets/apercu-cocktail.jpg" alt="Le cocktail" loading="lazy"></a><figcaption>Une rubrique : quantités, prix, composition des plateaux</figcaption></figure>
+    <figure><a href="assets/apercu-budget.jpg"><img src="assets/apercu-budget.jpg" alt="Synthèse budgétaire" loading="lazy"></a><figcaption>Synthèse budgétaire</figcaption></figure>
+    <figure><a href="assets/apercu-bon-pour-accord.jpg"><img src="assets/apercu-bon-pour-accord.jpg" alt="Bon pour accord" loading="lazy"></a><figcaption>Confirmation de commande</figcaption></figure>
+  </div>
+  <p><a href="exemple/Exemple-devis-BAUD.pdf">Voir l'exemple complet en PDF (11 pages)</a></p>
+</section>
+
+<section>
+  <h2>Installer en quatre étapes</h2>
+  <ol class="pas">
+    <li><strong>Avant de décompresser :</strong> clic droit sur le fichier ZIP téléchargé, <em>Propriétés</em>, cochez <em>Débloquer</em> en bas, <em>OK</em>. Sans cela, Windows bloque le programme sans rien afficher.</li>
+    <li><strong>Décompressez</strong> le dossier où vous voulez, et gardez-le entier.</li>
+    <li>Double-cliquez sur <strong>BAUD Studio Devis.exe</strong>. Une fenêtre noire s'ouvre, puis le navigateur. Laissez la fenêtre noire ouverte pendant que vous travaillez.</li>
+    <li>Si Windows affiche « Windows a protégé votre ordinateur » : <em>Informations complémentaires</em>, puis <em>Exécuter quand même</em>. C'est normal, le programme n'est pas signé électroniquement.</li>
+  </ol>
+  <p class="aide">Si l'antivirus met le fichier en quarantaine, ajoutez une exception sur le dossier : c'est un faux positif fréquent sur ce type de programme.</p>
+</section>
+
+<section>
+  <h2>Le parcours de test</h2>
+  <p>Prenez quelques devis FTBE de réceptions entreprise récents : des cocktails, mais aussi un repas ou un buffet pour voir ce qui se passe.</p>
+  <ol class="pas">
+    <li><strong>Nouveau devis.</strong> Glissez le PDF FTBE dans la zone. Vérifiez que le client, la date, le lieu, le nombre de convives et les rubriques sont bien lus.</li>
+    <li><strong>Relisez.</strong> Le déroulé est reconstitué : est-il plausible ? Les intitulés sont corrigés par des règles (accents, majuscules, codes internes) : en reste-t-il de mauvais ? Saisissez le contact client, absent du PDF FTBE, et choisissez votre interlocuteur.</li>
+    <li><strong>Photos.</strong> Onglet <em>Photothèque</em> : 13 photos de départ. Ajoutez les vôtres, surtout des pièces cocktail, et cochez les sections où chacune peut apparaître.</li>
+    <li><strong>Générez</strong> et comparez avec ce que vous faites à la main aujourd'hui.</li>
+    <li><strong>Historique et analyse.</strong> Changez le statut d'un devis (en attente, validé, refusé, reporté), rouvrez-le, régénérez-le.</li>
+  </ol>
+</section>
+
+<section>
+  <h2>À vérifier avec attention</h2>
+  <div class="alerte">
+    <ul class="points">
+      <li><strong>Prix unitaires.</strong> Ils sont affichés au centime alors que FTBE calcule sur le prix exact (15 × 1,33 € ne fait pas exactement 19,91 €). Une mention l'explique sous chaque tableau. Cela vous convient-il ?</li>
+      <li><strong>Conditions générales.</strong> Ce sont celles imprimées par FTBE sur le PDF (réceptions entreprise). Sont-ce bien celles que vous voulez ?</li>
+      <li><strong>Page « La maison BAUD » et accroche de couverture.</strong> Textes proposés par défaut, tirés de vos CGV. Modifiables dans le fichier <code>config.json</code> (Bloc-notes).</li>
+      <li><strong>Écarts d'arrondi.</strong> Si le détail des lignes diffère de quelques centimes du récapitulatif FTBE, un bandeau jaune le signale. Le total FTBE fait foi.</li>
+    </ul>
+  </div>
+</section>
+
+<section>
+  <h2>Ce qu'on attend comme retour</h2>
+  <ul class="points">
+    <li>Sur combien de devis l'outil s'est-il trompé, et sur quoi ?</li>
+    <li>Combien de temps prend la relecture à l'écran, comparé à la mise en forme manuelle actuelle ?</li>
+    <li>Qu'est-ce qui manque pour envoyer le résultat à un client sans y retoucher ?</li>
+    <li>Les captures d'écran des cas qui coincent sont les plus utiles.</li>
+  </ul>
+  <p><a class="bouton" href="mailto:manil@cfc-ia.fr?subject=Retours%20Studio%20Devis%20BAUD%20-%20version%201">Envoyer mes retours</a></p>
+  <p class="aide">Où sont les fichiers : tout reste dans le dossier de l'application (<code>data\devis</code> pour les devis générés, <code>assets\photos</code> pour la photothèque). Pour repartir de zéro, fermez l'application et supprimez le dossier <code>data</code>.</p>
+</section>
+
+<footer>
+  <div>Studio Devis · version 1 de test · CFC-IA<br>Aucune donnée client ne quitte le poste.</div>
+  <img src="assets/badge-traiteurs-de-france.png" alt="Les Traiteurs de France">
+</footer>
+</body>
+</html>
